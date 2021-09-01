@@ -13,10 +13,22 @@ function getRandomNumber(max) {
 const number = getRandomNumber(100);
 console.log(`El número aleatorio es ${number}`);
 
-function hadleClickTryButon() {
+function userMessage() {
   const inputNumber = parseInt(userNumber.value);
   console.log(inputNumber);
-  //userMessage();
+  if (inputNumber < 1 || inputNumber > 100) {
+    userClue.value = 'El número debe estar entre 1 y 100.';
+  } else if (inputNumber > number) {
+    userClue.value = 'Demasiado alto.';
+  } else if (inputNumber < number) {
+    userClue.value = 'Demasiado bajo.';
+  } else if (inputNumber === number) {
+    userClue.value = 'Has ganado campeona!!!';
+  }
+}
+
+function hadleClickTryButon() {
+  userMessage();
   //tryCounter();
 }
 //Eventos
