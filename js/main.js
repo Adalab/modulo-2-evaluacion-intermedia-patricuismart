@@ -3,8 +3,9 @@
 //Declaración de variables
 const userNumber = document.querySelector('.js_number');
 const tryButon = document.querySelector('.js_buton');
-const userClue = document.querySelector('.js_clue');
-const counter = document.querySelector('.js_counter');
+const clueInput = document.querySelector('.js_clue');
+const counterInput = document.querySelector('.js_counter');
+let counter = 0;
 
 //Funciones
 function getRandomNumber(max) {
@@ -17,19 +18,23 @@ function userMessage() {
   const inputNumber = parseInt(userNumber.value);
   console.log(inputNumber);
   if (inputNumber < 1 || inputNumber > 100) {
-    userClue.value = 'El número debe estar entre 1 y 100.';
+    clueInput.value = 'El número debe estar entre 1 y 100.';
   } else if (inputNumber > number) {
-    userClue.value = 'Demasiado alto.';
+    clueInput.value = 'Demasiado alto.';
   } else if (inputNumber < number) {
-    userClue.value = 'Demasiado bajo.';
+    clueInput.value = 'Demasiado bajo.';
   } else if (inputNumber === number) {
-    userClue.value = 'Has ganado campeona!!!';
+    clueInput.value = 'Has ganado campeona!!!';
   }
 }
 
+function tryCounter() {
+  ++counter;
+  counterInput.value = `Número de intentos: ${counter}`;
+}
 function hadleClickTryButon() {
   userMessage();
-  //tryCounter();
+  tryCounter();
 }
 //Eventos
 tryButon.addEventListener('click', hadleClickTryButon);
