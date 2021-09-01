@@ -22,7 +22,7 @@ return Math.ceil (Math.random () * max);
 5. Compare the number that the player has written in the input with the random number, and paint the clues corresponding on the screen.
 6. Update the attempt counter each time the player tries.
 
-Technology Stack:
+# Technology Stack:
 
 HTML -Semantic elements, tags -Attributes -Best practices: indentation, file naming conventions and directory structure
 
