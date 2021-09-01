@@ -11,10 +11,13 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 const number = getRandomNumber(100);
-console.log(number);
+console.log(`El número aleatorio es ${number}`);
 
 function hadleClickTryButon() {
-  console.log('has hecho click');
+  const inputNumber = parseInt(userNumber.value);
+  console.log(inputNumber);
+  //userMessage();
+  //tryCounter();
 }
 //Eventos
 tryButon.addEventListener('click', hadleClickTryButon);
