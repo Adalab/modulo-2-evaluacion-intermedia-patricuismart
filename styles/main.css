@@ -1,0 +1,22 @@
+.title {
+  margin: 20px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+.form__number {
+  width: 250px;
+}
+
+.form__buton {
+  width: 150px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 350px;
+}
