@@ -1,22 +1,39 @@
+* {
+  font-family: Roboto, sans-serif;
+  border-style: none;
+}
+
 .title {
   margin: 20px;
+  color: rgb(80, 79, 79);
 }
 .form {
   display: flex;
   flex-direction: column;
   margin: 20px;
+  height: 10vh;
+  justify-content: space-between;
 }
 .form__number {
-  width: 250px;
+  width: 200px;
+  background-color: lightgray;
+  height: 25px;
+  border-radius: 5px;
 }
 
 .form__buton {
-  width: 150px;
+  width: 70px;
+  background-color: rgb(4, 197, 181);
+  height: 25px;
+  border-radius: 5px;
+  color: white;
 }
 
 .input {
   display: flex;
   flex-direction: column;
   margin: 20px;
-  width: 350px;
+  width: 450px;
+  border: solid 3px lightgray;
+  padding: 5px;
 }
