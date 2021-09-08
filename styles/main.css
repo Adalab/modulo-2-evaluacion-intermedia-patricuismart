@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   margin: 20px;
-  height: 10vh;
+  height: 180px;
   justify-content: space-between;
 }
 .form__number {
@@ -28,11 +28,14 @@
   border-radius: 5px;
   color: white;
 }
+.form__buton:hover {
+  background-color: grey;
+  color: white;
+}
 
 .input {
   display: flex;
   flex-direction: column;
-  margin: 20px;
   width: 450px;
   border: solid 3px lightgray;
   padding: 5px;

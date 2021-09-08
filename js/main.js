@@ -8,15 +8,20 @@ const counterInput = document.querySelector('.js_counter');
 let counter = 0;
 
 //Funciones
+
+// Generar número aleatorio (entre 1-100)
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 const number = getRandomNumber(100);
 console.log(`El número aleatorio es ${number}`);
 
+// Condicionales para dar pistas al usuario para adivinar el número aleatorio
+
 function userMessage() {
   const inputNumber = parseInt(userNumber.value);
   console.log(inputNumber);
+
   if (inputNumber < 1 || inputNumber > 100) {
     clueInput.value = 'El número debe estar entre 1 y 100.';
   } else if (inputNumber > number) {
@@ -28,11 +33,17 @@ function userMessage() {
   }
 }
 
+// Contador número de intentos
+
 function tryCounter() {
   ++counter;
   counterInput.value = `Número de intentos: ${counter}`;
 }
-function hadleClickTryButon() {
+
+// Función que escucha el evento y ejecuta las pistas para usuaria y contador
+
+function hadleClickTryButon(ev) {
+  ev.preventDefault();
   userMessage();
   tryCounter();
 }
