@@ -28,7 +28,7 @@ function userMessage() {
     clueInput.value = 'Demasiado alto.';
   } else if (inputNumber < number) {
     clueInput.value = 'Demasiado bajo.';
-  } else if (inputNumber === number) {
+  } else {
     clueInput.value = 'Has ganado campeona!!!';
   }
 }
